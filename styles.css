@@ -1,0 +1,535 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+body{
+    overflow-x: hidden; 
+}
+
+
+/*  HEADER  */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+.title span{
+    margin: 0 10px;
+    font-weight:bolder;
+}
+.title span{
+    animation: Up 0.5s ease-in-out infinite;
+    -webkit-animation: Up 0.5s ease-in-out infinite;
+}
+.title span:nth-child(1){
+    animation-delay: 0.25s;
+}
+.title span:nth-child(2){
+    animation-delay: 0.5s;
+}
+.title span:nth-child(3){
+    animation-delay: 0.75s;
+}
+.title span:nth-child(4){
+    animation-delay: 1s;
+}
+.title span:nth-child(5){
+    animation-delay: 1.25s;
+}
+.title span:nth-child(6){
+    animation-delay: 1.5s;
+}
+.title span:nth-child(7){
+    animation-delay: 1.5s;
+}
+.title span:nth-child(8){
+    animation-delay: 1.5s;
+}
+.title span:nth-child(9){
+    animation-delay: 1.75s;
+}
+.title span:nth-child(10){
+    animation-delay: 2s;
+}
+.title span:nth-child(11){
+    animation-delay: 2.25s;
+}
+.title span:nth-child(12){
+    animation-delay: 2.50s;
+}
+.title span:nth-child(13){
+    animation-delay: 2.75s;
+}
+.title span:nth-child(14){
+    animation-delay: 3s;
+}
+
+/*  TITLE ANOMATION  */
+@keyframes Up{
+    0%{
+        transform: translateY(-0%);
+        -webkit-transform: translateY(-0%);
+        -moz-transform: translateY(-0%);
+        -ms-transform: translateY(-0%);
+        -o-transform: translateY(-0%);
+    }
+    50%{
+        transform: translateY(-25%);
+        -webkit-transform: translateY(-25%);
+        -moz-transform: translateY(-25%);
+        -ms-transform: translateY(-25%);
+        -o-transform: translateY(-25%);
+}
+    100%{
+        transform: translateY(-0%);
+        -webkit-transform: translateY(-0%);
+        -moz-transform: translateY(-0%);
+        -ms-transform: translateY(-0%);
+        -o-transform: translateY(-0%);
+    }
+}
+
+/*  MAIN  */
+main{
+    width: 100%;
+    height:90%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#create{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#createSectionButton,#createStickyButton{
+    background-color: #1cb0f6;
+    color: white;
+    width: 15%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    box-shadow:    1px 1px #333,    2px 2px #333,    3px 3px #333,    4px 4px #333,    5px 5px #333;
+    cursor: pointer;
+}
+#createSectionButton p,#createStickyButton p{
+    font-size: 2rem;
+    padding: 1%;
+    font-weight: bold;
+    text-align: center;
+}
+#createSectionButton:hover,#createStickyButton:hover{
+    width: 25%;
+}
+#createSectionButton:hover p,#createStickyButton:hover p{
+    font-size: 3rem;
+}
+
+
+#sections{
+    width: 100%;
+    height: auto;
+    min-height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sectionButton{
+    margin: 1% 0;
+    color: white;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sectionButtonNotActive{
+    background-color: #e62143;
+    box-shadow:
+    0.2rem 0.2rem #333,
+    0.4rem 0.4rem #333,
+    0.6rem 0.6rem #333,
+    0.8rem 0.8rem #333,
+    0.10rem 0.10rem #333;
+}
+.sectionButtonActive{
+    background-color: green;
+    box-shadow:
+    0.1rem 0.1rem #333,
+    0.1rem 0.1rem #333,
+    0.2rem 0.2rem #333,
+    0.2rem 0.2rem #333,
+    0.15rem 0.4rem #333;
+}
+.sectionButton:hover{
+    background-color: green;
+}
+.sectionButton p{
+    margin: 0;
+    font-size: 3rem;
+    padding: 2rem;
+}
+/*              CREATE SECTION     */
+#createSection{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#createSectionContainer{
+    width: 80rem;
+    height: 80rem;
+    background-color: white;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    border: 1rem solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#createSectionContainer h1{
+    font-size: 4rem;
+    font-style: italic;
+}
+#createSectionForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#createSectionForm h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+#createSectionForm input{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    width: 80%;
+}
+
+#createSectionButtonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#createSectionCreate,#createSectionCancel{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+#createSectionCreate h1,#createSectionCancel h1{
+    font-size: 3rem;
+    padding: 1rem 8rem;
+}
+
+
+/*              CREATE STICKY     */
+#createSticky{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#createStickyContainer{
+    width: 80rem;
+    height: 80rem;
+    background-color: white;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    border: 1rem solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#createStickyContainer h1{
+    font-size: 4rem;
+    font-style: italic;
+}
+#createStickyForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#createStickyForm h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#createStickyForm input[type="text"]{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    width: 80%;
+}
+#createStickyForm input[type="color"]{
+    margin-top:0.5% ;
+    margin-left: 3%;
+    width: 9rem;
+    height: 5rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    appearance: none;    /* For some modern browsers */
+    -webkit-appearance: none; /* For Safari and Chrome */
+    -moz-appearance: none;
+}
+
+#createStickyButtonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#createStickyCreate,#createStickyCancel{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+#createStickyCreate h1,#createStickyCancel h1{
+    font-size: 3rem;
+    padding: 1rem 8rem;
+}
+
+
+
+
+
+#stickyNotesContainer{
+    width: 100%;
+    height:auto;
+    min-height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.stickyNotes{
+    width: 100%;
+    height:auto;
+    min-height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.stickyNote{
+    background-color: yellow;
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform:rotate(-5deg) ;
+    -webkit-transform:rotate(-5deg) ;
+    -moz-transform:rotate(-5deg) ;
+    -ms-transform:rotate(-5deg) ;
+    -o-transform:rotate(-5deg) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10rem;
+}
+.stickyNote img{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    top: -15%;
+}
+.stickyNote p{
+    margin: 0;
+    word-wrap: break-word;
+    width:90%;
+    height: 75%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 70px;
+}
+
+
+.stickyNote img.animatePoint {
+    animation: Point 0.4s ease-in-out forwards;
+    -webkit-animation: Point 0.4s ease-in-out forwards;
+}
+
+.stickyNote img.animateNotPoint {
+    animation: NotPoint 0.5s ease-in-out forwards;
+    -webkit-animation: NotPoint 0.5s ease-in-out forwards;
+}
+
+.stickyNote.animatePoint2 {
+    animation: Point2 0.5s ease-in-out forwards;
+    -webkit-animation: Point2 0.5s ease-in-out forwards;
+}
+
+.stickyNote.animateNotPoint2 {
+    animation: NotPoint2 0.5s ease-in-out forwards;
+    -webkit-animation: NotPoint2 0.5s ease-in-out forwards;
+}
+
+@keyframes Point {
+    from{
+        left: 45%;
+        top: -15%;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    to{
+        left: 90%;
+        top: -30%;
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+}
+}
+@keyframes NotPoint {
+    from{
+        left: 90%;
+        top: -30%;
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+    to{
+        left: 45%;
+        top: -15%;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+}
+
+@keyframes Point2 {
+    from{
+        transform: scale(1) rotate(-5deg);
+        -webkit-transform: scale(1) rotate(-5deg);
+        -moz-transform: scale(1) rotate(-5deg);
+        -ms-transform: scale(1) rotate(-5deg);
+        -o-transform: scale(1) rotate(-5deg);
+    }   
+    to{
+        transform: scale(1.2) rotate(-15deg);
+        -webkit-transform: scale(1.2) rotate(-15deg);
+        -moz-transform: scale(1.2) rotate(-15deg);
+        -ms-transform: scale(1.2) rotate(-15deg);
+        -o-transform: scale(1.2) rotate(-15deg);
+    }
+}
+@keyframes NotPoint2 {
+    from{
+        transform: scale(1.2) rotate(-15deg);
+        -webkit-transform: scale(1.2) rotate(-15deg);
+        -moz-transform: scale(1.2) rotate(-15deg);
+        -ms-transform: scale(1.2) rotate(-15deg);
+        -o-transform: scale(1.2) rotate(-15deg);
+    }
+    to{
+        transform: scale(1) rotate(-5deg);
+        -webkit-transform: scale(1) rotate(-5deg);
+        -moz-transform: scale(1) rotate(-5deg);
+        -ms-transform: scale(1) rotate(-5deg);
+        -o-transform: scale(1) rotate(-5deg);
+    }
+}
+
+
+/*  FOOTER  */
+footer{
+    width: 100%;
+    height: 9rem;
+    background-color:black;
+    display: flex;
+}
+#CopyRightContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p{
+    font-size: 2rem;
+    color: white;
+    display: block;
+    margin: 0;
+}
+footer p:nth-child(1){
+    margin-top: 1%;
+}

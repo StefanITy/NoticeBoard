@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Notice Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel = "icon" href = "./Src/Logo.png">
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <span>N</span>
+                <span>O</span>
+                <span>T</span>
+                <span>I</span>
+                <span>C</span>
+                <span>E</span>
+                <span></span>
+                <span></span>
+                <span>B</span>
+                <span>O</span>
+                <span>A</span>
+                <span>R</span>
+                <span>D</span>
+            </div>
+        </header>
+
+        <main >
+            <div id="create">
+                <div id="createSectionButton">
+                    <p>NEW SECTION</p>
+                </div>
+                <div id="createStickyButton">
+                    <p>NEW STICKY</p>
+                </div>
+            </div>
+            <div id="sections">
+                
+            </div>
+
+
+        <div id="stickyNotesContainer">
+           
+        </div>
+
+        <div id="createSection">
+            <div id="createSectionContainer">
+                <h1>CREATE NEW SECTION</h1>
+                <div id="createSectionForm">
+                    <h1>TITLE</h1>
+                    <input type="text" id="createSectionInput" placeholder="Enter a title!">
+                </div>
+                <div id="createSectionButtonsContainer">
+                    <div style="background-color: #1cb0f6;" id="createSectionCreate">
+                        <h1>CREATE</h1>
+                    </div>
+                    <div style="background-color: #e62143;" id="createSectionCancel">
+                        <h1>CANCEL</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="createSticky">
+            <div id="createStickyContainer">
+                <h1>CREATE NEW STICKY NOTE</h1>
+                <div id="createStickyForm">
+                    <h1>TITLE</h1>
+                    <input type="text" id="createStickyInput" placeholder="Enter a title!">
+                    <h1>DESCRIPTION</h1>
+                    <input type="text" id="createStickyInputDescription" placeholder="Enter a description!">
+                    <h1 style="display: inline;">BACKGROUND COLOR:</h1>
+                    <input type="color" id="createStickyInputBackgroundColor" value="#FFFF00">
+                    <h1 style="display: inline;">TEXT COLOR:</h1>
+                    <input type="color" id="createStickyInputTextColor">
+                    
+                </div>
+                <div id="createStickyButtonsContainer">
+                    <div style="background-color: #1cb0f6;" id="createStickyCreate">
+                        <h1>CREATE</h1>
+                    </div>
+                    <div style="background-color: #e62143;" id="createStickyCancel">
+                        <h1>CANCEL</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </main>
+        <footer>
+            <div id="CopyRightContainer">
+                <p>StefanIT</p>
+                <p>©2023 Notice-Board</p>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
