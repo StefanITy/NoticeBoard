@@ -31,7 +31,7 @@ function checkWindowDimensions() {
         }
 
         // Increase font size until it's just about to overflow
-        while (p.scrollHeight <= p.offsetHeight) { // 100 is just an arbitrary upper limit
+        while (p.scrollHeight <= p.offsetHeight && fontSize <= 100) { // 100 is just an arbitrary upper limit
             fontSize++;
             p.style.fontSize = fontSize + "px";
         }
@@ -121,6 +121,7 @@ function CreateSection(){
             if(!childElement.classList.contains("sectionButtonNotActive"))
                 childElement.classList.add("sectionButtonNotActive");
         }
+        checkWindowDimensions();
     }
 }
 
@@ -154,9 +155,7 @@ function SwitchSection(){
     
     stickyNotesContainer.children[childIndex].style.display="flex";
 
-
-
-    console.log("Clicked on child number:", childIndex);
+    checkWindowDimensions();
 }
 
 
@@ -173,17 +172,21 @@ createStickyCancel.addEventListener("click",function(){createSticky.style.displa
 
 function CreateStickyNote(){
     let createStickyInputValue=document.getElementById("createStickyInput").value;
-    let createStickyInputDescriptionValue=document.getElementById("createStickyInputDescription").value;
-    if(createStickyInputValue.trim() !== "" && createStickyInputDescriptionValue.trim()!=""){
+    //let createStickyInputDescriptionValue=document.getElementById("createStickyInputDescription").value;
+    let createStickyInputBackgroundColorValue=document.getElementById("createStickyInputBackgroundColor").value;
+    let createStickyInputTextColorValue=document.getElementById("createStickyInputTextColor").value;
+    if(createStickyInputValue.trim() !== ""){
         for (let i = 0; i < stickyNotesContainer.children.length; i++) {
             let childElement = stickyNotesContainer.children[i];
             if(childElement.style.display!="none"){
                 document.getElementById("createStickyInput").value="";
-                document.getElementById("createStickyInputDescription").value="";
+                //document.getElementById("createStickyInputDescription").value="";
                 createSticky.style.display="none";
 
                 let stickyNote=document.createElement("div");
                 stickyNote.classList.add("stickyNote");
+                stickyNote.style.backgroundColor=createStickyInputBackgroundColorValue;
+                stickyNote.style.color=createStickyInputTextColorValue;
 
                 let PinImg=document.createElement("img");
                 PinImg.src="./Src/Pin.png";
