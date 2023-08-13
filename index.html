@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel = "icon" href = "./Src/Logo.png">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>  
     </head>
     <body>
         <header>
@@ -28,11 +29,17 @@
 
         <main >
             <div id="create">
+                <div id="choseBackground">
+                    <i class='bi bi-paint-bucket'></i>
+                </div>
                 <div id="createSectionButton">
                     <p>NEW SECTION</p>
                 </div>
                 <div id="createStickyButton">
                     <p>NEW STICKY</p>
+                </div>
+                <div id="FullScreenButton">
+                    <img src="./Src/FullScreen.png" alt="">
                 </div>
             </div>
             <div id="sections">
@@ -69,9 +76,9 @@
                 <div id="createStickyForm">
                     <h1>TITLE</h1>
                     <input type="text" id="createStickyInput" placeholder="Enter a title!">
-                    <!--<h1>DESCRIPTION</h1>
-                    <input type="text" id="createStickyInputDescription" placeholder="Enter a description!(optional)">
-                    <h1 style="display: inline;">BACKGROUND COLOR:</h1>  -->
+                    <h1>DESCRIPTION</h1>
+                    <textarea rows="4" id="createStickyInputDescription" placeholder="Enter a description!(optional)"></textarea>
+                    <h1 style="display: inline;">BACKGROUND COLOR:</h1> 
                     <input type="color" id="createStickyInputBackgroundColor" value="#FFFF00">
                     <h1 style="display: inline;">TEXT COLOR:</h1>
                     <input type="color" id="createStickyInputTextColor">
@@ -88,12 +95,28 @@
             </div>
         </div>
 
+        <div id="choseBackgroundBox">
+            <div id="choseBackgroundContainer">
+                <h1>CHOOSE BACKGROUND COLOR</h1>
+                <div id="choseBackgroundForm">
+                    <h1>BACKGROUND COLOR</h1>
+                    <input type="color" id="choseBackgroundInput" value="#ffffff">
+                </div>
+                <div id="choseBackgroundButtonsContainer">
+                    <div style="background-color: #1cb0f6;" id="choseBackgroundOk">
+                        <h1>Ok</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         </main>
         <footer>
             <div id="CopyRightContainer">
                 <p>StefanIT</p>
                 <p>©2023 Notice-Board</p>
             </div>
+            
         </footer>
 
         <script src="app.js"></script>
