@@ -87,10 +87,13 @@ createSectionCancel.addEventListener("click",function(){createSection.style.disp
 let sections=document.getElementById("sections");
 
 let stickyNotesContainer=document.getElementById("stickyNotesContainer");
+function CreateStickyMini(){
+    createSticky.style.display="flex";
+}
 function CreateSection(){
     let createSectionInputValue=document.getElementById("createSectionInput").value;
     if(createSectionInputValue.trim() !== ""){
-        createStickyButton.addEventListener("click", function(){createSticky.style.display="flex";});createStickyButton.style.opacity="1";
+        createStickyButton.addEventListener("click", CreateStickyMini);createStickyButton.style.opacity="1";
         currentSection++;
 
         document.getElementById("createSectionInput").value="";
@@ -108,15 +111,14 @@ function CreateSection(){
         bin.classList.add("SectionsBin");
         bin.addEventListener("click",function(){
             setTimeout(function() {
-                console.log("bin");
                 const childrenArray = Array.from(sections.children);
-                console.log(childrenArray);
                 let parentDiv=bin.parentElement;
-                console.log(parentDiv);
                 const childIndex = childrenArray.indexOf(parentDiv);
-                console.log("asdsa:", childIndex);
                 stickyNotesContainer.children[childIndex].remove();
                 parentDiv.remove();
+                if(sections.children.length==0){
+                    createStickyButton.removeEventListener("click", CreateStickyMini);createStickyButton.style.opacity="0.5";
+                }
             }, 10);
         });
         div.appendChild(bin);
@@ -149,7 +151,6 @@ createSectionCreate.addEventListener("click",CreateSection);
 
 
 function SwitchSection(){
-    console.log("swith!");
     const parentDiv = this.parentElement;
     const childrenArray = Array.from(parentDiv.children);
     const childIndex = childrenArray.indexOf(this);
@@ -247,7 +248,6 @@ function CreateStickyNote(){
                     });
                     stickyNote.addEventListener("mouseleave", function() {
                         // Apply hover animation
-                        console.log("leave");
                         PinImg.classList.remove("animatePoint");
                         stickyNote.classList.remove("animatePoint2");
                         PinImg.classList.add("animateNotPoint");
@@ -288,7 +288,6 @@ function CreateStickyNote(){
 
                     stickyNote.addEventListener("click",function(){
                         if(!stickyremove){
-                            console.log("open!!!");
                             stickyParent=this;
                             description=stickyNote.lastChild;
                             let main=document.querySelector("main");
