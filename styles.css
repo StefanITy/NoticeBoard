@@ -523,7 +523,7 @@ main{
     word-wrap: break-word;
     width:90%;
     height: 75%;
-    margin-top: 15%;
+    margin-top: 30%;
     text-align: center;
     font-size: 70px;
 }
@@ -650,6 +650,7 @@ main{
     height: 100%;
     word-wrap: break-word;
     text-align: center;
+    font-size: 12px
 }
 .descriptionBack{
     border-radius: 15px;

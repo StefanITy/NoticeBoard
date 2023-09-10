@@ -43,24 +43,9 @@ function checkWindowDimensions() {
 
 
     let p2Elements = document.querySelectorAll(".descriptionContainer p");
-
     p2Elements.forEach(p => {
-        let fontSize = parseInt(window.getComputedStyle(p).fontSize);
-
-        while (p.scrollHeight > p.offsetHeight && fontSize > 0) {
-            fontSize--;
-            p.style.fontSize = fontSize + "px";
-        }
-
-        // Increase font size until it's just about to overflow
-        while (p.scrollHeight <= p.offsetHeight && fontSize <= 100) { // 100 is just an arbitrary upper limit
-            fontSize++;
-            p.style.fontSize = fontSize + "px";
-        }
-
-        // Revert one step back to ensure the content fits
-        fontSize--;
-        p.style.fontSize = fontSize + "px";
+        p.style.fontSize = 10 + "rem";
+        console.log('',p.style.fontSize);
     });
     
 }
